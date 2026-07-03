@@ -1,4 +1,5 @@
-﻿using Task01.Drills;
+﻿using Name;
+using Task01.Drills;
 
 namespace Task01
 {
@@ -26,6 +27,11 @@ namespace Task01
             Console.WriteLine("13.Palindrome Checker");
             Console.WriteLine("14.Simple Expense Tracker");
             Console.WriteLine("15.Array Rotation");
+            Console.WriteLine("16.Frequency Counter");
+            Console.WriteLine("17.Simple Search Engine");
+            Console.WriteLine("18.Number Statistics");
+            Console.WriteLine("19.Simple Ticket Price Calculator");
+            Console.WriteLine("20.Method Refactoring Challenge");
 
             var choice = Console.ReadLine();
             switch (choice)
@@ -47,6 +53,13 @@ namespace Task01
                 case "14": new Drill14_SimpleExpenseTracker().Run();
                 break;
                 case "15": new Drill15_ArrayRotation().Run();
+                break;
+                case "16": new Drill16_FrequencyCounter().Run();
+                break;
+                case "17": new Drill17_SimpleSearchEngine().Run();break;
+                case "18": new Drill18_NumberStatistics().Run();break;
+                case "19": new Drill19_SimpleTicketPriceCalculator().Run(); break;
+                case "20": new Drill20_MethodRefactoringChallenge().Run();
                 break;
 
                 default:Console.WriteLine("Invalid choice."); break;
