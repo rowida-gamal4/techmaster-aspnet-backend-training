@@ -21,6 +21,11 @@ namespace Task01
             Console.WriteLine("8.Password Strength Checker");
             Console.WriteLine("9.Shopping Cart Total");
             Console.WriteLine("10.Simple ATM Menu");
+            Console.WriteLine("11.Duplicate Number Detector");
+            Console.WriteLine("12.Email Validator");
+            Console.WriteLine("13.Palindrome Checker");
+            Console.WriteLine("14.Simple Expense Tracker");
+            Console.WriteLine("15.Array Rotation");
 
             var choice = Console.ReadLine();
             switch (choice)
@@ -36,6 +41,13 @@ namespace Task01
                 case "8": new Drill08_PasswordStrengthChecker().Run(); break;
                 case "9": new Drill09_ShoppingCartTotal().Run(); break;
                 case "10": new Drill10_SimpleATMMenu().Run(); break;
+                case "11": new Drill11_DuplicateNumberDetector().Run(); break;
+                case "12": new Drill12_EmailValidator().Run(); break;
+                case "13": new Drill13_PalindromeChecker().Run(); break;
+                case "14": new Drill14_SimpleExpenseTracker().Run();
+                break;
+                case "15": new Drill15_ArrayRotation().Run();
+                break;
 
                 default:Console.WriteLine("Invalid choice."); break;
             }
