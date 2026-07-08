@@ -1,0 +1,48 @@
+1- A class is a blueprint that defines the properties and methods of something. 
+An object is an instance created from that class. 
+Example : Customer is a class, and Rowida is an object created from it.
+
+2- Encapsulation means protecting the data inside a class and allowing prevent altering or modifing it badly. This keeps the object in a valid state.
+
+3-The account balance should not be public to prevent altering it or changing it directly to invalid value 
+and change it with methods like Deposit() and Withdraw().
+
+4-field stores data directly inside the class while Property provides controlled access to that data using get and set and is more flexible 
+
+5- We use Constructors to initialize an object when it is created instead of leaving it empty.
+
+6- A service class contains the business logic of the application instead of putting calculations or processing inside Program or the UI, we move them into a service class to keep the code organized and easier to maintain .
+
+7-we should avoid huge Main methods because it becomes difficult to read, understand, and maintain and code become unorganized and contain a lot of redundancy.
+
+8-An array has a fixed size that cannot change after it is created while List is more flexible it can grow or shrink while the program is running.
+
+9-when we need to store data as key-value pairs and quickly find a value using its key, like storing products by their ids.
+
+10- LINQ is used to query and filter collections in C# as It makes searching,sorting,grouping,selecting data easier and more readable .
+
+11-Where is used to filter data based on a condition 
+Select is used to choose the data/columns that we want to return.
+
+12- To group data based on a common value
+
+13-Skip is used to ignore a number of records, Take is used to return a specific number of records. They are used for pagination.
+
+14-A primary key is a column that uniquely identifies each row in a table. 
+
+15-A foreign key is a column that used as reference to another table . It creates a relationship between the tables and helps keep the data consistent.
+
+16-A one-to-many relationship means one record in one table can be related to many records in another table.
+Ex: one customer can have many orders.
+
+17-We use JOIN to combine data from multiple related tables.
+
+18- A Table is the database representation of that entity where the data is stored while An entity represents an object in the system as Customer .
+
+19-GitHub is used to store projects online, track changes, collaborate with others, and keep a backup of the code.
+
+20- As it explains what the project does and how and the project structure and any other useful information .
+
+21-As multiple commits show progress and the steps of the development and track changes 
+
+22-It gives a better impression and makes working with the project easier since it makes the project easier to understand and review and show the development process step by step.
