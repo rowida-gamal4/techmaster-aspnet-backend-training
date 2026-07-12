@@ -6,7 +6,7 @@ namespace ApiRoutingDrills.Controllers
     [Route("api/[controller]")]
     public class NotesController : ControllerBase
     {
-        private readonly List<CreateNoteRequest> requests = new();
+        private static readonly List<CreateNoteRequest> requests = new List<CreateNoteRequest>();
         [HttpPost]
 
         //Drill 06
@@ -66,7 +66,7 @@ namespace ApiRoutingDrills.Controllers
         public IActionResult UpdateNote(int id, [FromBody] UpdateNoteRequest userNote)
         {
             if (string.IsNullOrWhiteSpace(userNote.Title) || string.IsNullOrWhiteSpace(userNote.Content))
-                return BadRequest();
+                return BadRequest("Title and Content are required.");
             else
             {
                 var note = requests.FirstOrDefault(n => n.Id == id);
@@ -103,7 +103,56 @@ namespace ApiRoutingDrills.Controllers
             }
         }
 
+        //Drill 11
+        [HttpGet("search")]
+        public IActionResult SearchNote([FromQuery] string keyword)
+        {
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                return BadRequest(new
+                {
+                    message = "Keyword is required."
+                });
+            }
+            var notes = requests.Where(n => n.Title.Contains(keyword, StringComparison.OrdinalIgnoreCase) || n.Content.Contains(keyword, StringComparison.OrdinalIgnoreCase));
+            if (!notes.Any())
+            {
+                return NotFound(new { message = "Note not found" });
+            }
+            else
+            {
+                return Ok(notes);
+            }
+        }
+        //Drill 12 
+        [HttpGet("pagination")]
+        public IActionResult PaginationDemo([FromQuery] int pageNumber, [FromQuery] int pageSize)
+        {
+            if (pageNumber <= 0)
+                return BadRequest(new
+                {
+                    message = "Page number must be greater than zero."
+                });
 
+            if (pageSize < 1 || pageSize > 50)
+                return BadRequest(new
+                {
+                    message = "Page size must be between 1 and 50."
+                });
+            var notes = requests.Skip((pageNumber - 1) * pageSize).Take(pageSize);
+
+            if (notes.Any())
+                return Ok(new
+                {
+                    items = notes,
+                    PageNumber = pageNumber,
+                    PageSize = pageSize,
+                    TotalCount = requests.Count
+                });
+
+            else
+                return NotFound("No Notes Found");
+        }
 
 
     }
