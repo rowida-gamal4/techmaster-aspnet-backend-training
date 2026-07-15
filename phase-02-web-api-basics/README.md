@@ -42,9 +42,16 @@ Topics covered include:
 
 ## Tasks
 
-| Task    | Description         | Status |
-|         |                     |        |
-| Task 00 | API Workspace Setup | Done   |
+| Task    | Description                         | Status |
+|         |                                     |        |
+| Task 00 | API Workspace Setup                 | Done   |
+| Task 01 | REST & Routing Dril                 | Done   |
+| Task 02 | Student Management API              | Done   |
+| Task 03 | Products & Categories API           | Done   |
+| Task 04 | Book Store API Mini-Project         | Done   |
+| Task 05 | Swagger & Postman Evidence Pack     | Done   |
+| Task 06 | API Standards & Refactor Pack       | Done   |
+| Task 07 | Interview Answers & API Explanation | Done   |
 
 
 
@@ -65,6 +72,7 @@ phase-02-web-api-basics/
 
 
 ## Evidence
-- Swagger screenshots: will be updated soon
-- Postman collection: will be updated soon
-- Demo video: will be updated soon
+- Swagger screenshots: https://drive.google.com/drive/folders/1Ggf3MrINvhtRUYNu64ZgsJgNApvcfLXZ?usp=drive_link
+- Postman collection:  https://drive.google.com/drive/folders/1Ggf3MrINvhtRUYNu64ZgsJgNApvcfLXZ?usp=drive_link
+- Demo video:  https://drive.google.com/drive/folders/1Ggf3MrINvhtRUYNu64ZgsJgNApvcfLXZ?usp=drive_link
+
