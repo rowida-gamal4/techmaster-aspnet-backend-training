@@ -1,0 +1,72 @@
+1- REST is a way to design APIs using standard HTTP methods. Each endpoint represents a resource, like products or students, and each HTTP method performs a specific action on that resource.
+
+2-
+- GET : retrieves data.
+- POST : creates a new resource.
+- PUT : updates an entire resource.
+- PATCH : updates only specific fields of a resource.
+- DELETE : removes a resource.
+
+For example, in my Product API, I used POST to create a product and GET to retrieve products.
+
+3-
+- 200 OK : when a request is successful.
+- 201 Created : when a new resource is created.
+- 204 No Content : when an operation succeeds but there is nothing to return.
+- 400 Bad Request : when the request data is invalid.
+- 404 Not Found : when the requested resource does not exist.
+
+
+4- Route parameters are part of the URL and usually identify a specific resource 
+   ex : /api/products/5
+
+ -Query parameters are used for filtering or searching.
+  ex : /api/products?name=laptop
+
+
+5- The controller receives HTTP requests, calls the service to perform the required work, and returns the appropriate response to the client. It should not contain business logic.
+
+6- Because DTOs let us control what data is received and returned. 
+  ex:  In my Product API, I used "CreateProductRequest" for creating products and "ProductResponse" for returning product data instead of exposing the model directly.
+
+
+7- Keeping business logic in the service makes the controller smaller, cleaner, and easier to maintain.
+
+8- Dependency Injection is a way to provide objects that a class needs instead of creating them inside the class. 
+ ex : In my API, the controller receives "IProductService" through the constructor.
+
+
+9- Validation can happen using Data Annotations in DTOs, inside the service for business rules, and automatically by ASP.NET Core when using "[ApiController]".
+
+10- Swagger provides documentation for the API. It lets me see all endpoints, test them, and view request and response formats without writing any code.
+
+11- Postman is better for organizing requests into collections, testing different environments, and saving API tests for later.
+
+
+12- proper status codes, returning consistent data, clear messages, and follows the same response format across endpoints.
+
+
+13- I would add query parameters to the endpoint, then filter the data based on those values.
+   ex : GET /api/products?name=phone
+
+14.- Pagination prevents returning thousands of records at once. It improves performance .
+
+15- 
+- UI sends requests and displays data.
+- Controller receives requests and returns responses.
+- Service contains the business logic.
+- Data storage stores the application data, such as a database or an in-memory list.
+
+
+16- They should see small, clear commits that show the progress of the project, such as creating DTOs, adding services, refactoring the controller, and updating the README.
+
+
+17- I can include Swagger screenshots, Postman screenshots, sample requests and responses, and a README explaining how to run and test the project.
+
+
+18- I first read the error message and stack trace, check the logs, debug the code, verify the service logic, and make sure the request data is correct.
+
+
+19- Users can send invalid data. We should always validate input before processing or storing it to keep the application secure and reliable.
+
+20- In-memory storage is temporary. All data is lost when the application stops, Real applications use databases to store data permanently.
