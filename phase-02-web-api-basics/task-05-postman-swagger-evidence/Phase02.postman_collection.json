@@ -1,0 +1,1392 @@
+{
+	"info": {
+		"_postman_id": "60c1baf7-2312-49c4-871f-d6f8c1cc2047",
+		"name": "Phase02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "54656082",
+		"_collection_link": "https://rowidagamal33-240050.postman.co/workspace/Rowida-Gamal's-Workspace~65c282f0-dc76-4213-8f29-c6c0c1b3adda/collection/54656082-60c1baf7-2312-49c4-871f-d6f8c1cc2047?action=share&source=collection_link&creator=54656082"
+	},
+	"item": [
+		{
+			"name": "Task01",
+			"item": [
+				{
+					"name": "Drill14",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5216/api/StatusCodes/ali",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5216",
+									"path": [
+										"api",
+										"StatusCodes",
+										"ali"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5216/api/StatusCodes/heloooo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5216",
+									"path": [
+										"api",
+										"StatusCodes",
+										"heloooo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5216/api/StatusCodes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5216",
+									"path": [
+										"api",
+										"StatusCodes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Drill01",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill02",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Tools/echo/Rowida",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Tools",
+								"echo",
+								"Rowida"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill03",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Calculator/add?a=3&b=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Calculator",
+								"add"
+							],
+							"query": [
+								{
+									"key": "a",
+									"value": "3"
+								},
+								{
+									"key": "b",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill04",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Converter/celsius-to-fahrenheit?value=-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Converter",
+								"celsius-to-fahrenheit"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "-10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill05",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/grades/calculate/?score=80",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"grades",
+								"calculate",
+								""
+							],
+							"query": [
+								{
+									"key": "score",
+									"value": "80"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill06",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill07",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill08",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Drill09",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \n  \"title\": \"Note03\",\n  \"content\": \"Test Note03\"\n \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/Notes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Notes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill10",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Notes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Notes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill11",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Notes/search?keyword=t",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Notes",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "t"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill12",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Notes/pagination?pageNumber=1&pageSize=2\n\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Notes",
+								"pagination"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2\n\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill13",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Student-Name",
+								"value": "Rowida",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5216/api/request-info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"request-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drill15",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/Errors/demo?name=helooooooooo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"Errors",
+								"demo"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "helooooooooo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student Management API",
+			"item": [
+				{
+					"name": "CreateStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"arwa\",\n  \"email\": \"arwa@gmail.com\",\n  \"phoneNumber\": \"01122055627\",\n  \"trackName\": \"front end\",\n  \"gitHubProfileUrl\": \"\",\n  \"linkedInProfileUrl\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{StudentBaseUrl}}/api/Students",
+							"host": [
+								"{{StudentBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{StudentBaseUrl}}/api/Students?IsActive=true&pageNumber=1&PageSize=3",
+							"host": [
+								"{{StudentBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "Email",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "TrackName",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "IsActive",
+									"value": "true"
+								},
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "PageSize",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{StudentBaseUrl}}/api/Students/1",
+							"host": [
+								"{{StudentBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Students",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"SamaS\",\n  \"email\": \"sama@example.com\",\n  \"phoneNumber\": \"01122055627\",\n  \"trackName\": \"Asp.NEt\"\n  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{StudentBaseUrl}}/api/Students/1",
+							"host": [
+								"{{StudentBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Students",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"isActive\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{StudentBaseUrl}}/api/Students/1/status",
+							"host": [
+								"{{StudentBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Students",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{StudentBaseUrl}}/api/Students/1",
+							"host": [
+								"{{StudentBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Students",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{StudentBaseUrl}}/api/Students/stats",
+							"host": [
+								"{{StudentBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Students",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products & Categories API",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Categories",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Category06\",\n  \"description\": \"Test06\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Categories",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Products",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Products/8",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Products",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"ProductTest\",\n  \"categoryId\": 3,\n  \"price\": 200,\n  \"stockQuantity\": 5,\n  \"supplierName\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Products",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Test16\",\n  \"categoryId\": 3,\n  \"price\": 400,\n  \"stockQuantity\": 5,\n  \"supplierName\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Products/1",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product Stock",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"stockQuantity\": 90\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Products/1/stock",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Products",
+								"1",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Products/1",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products With Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Products/filter?MaxPrice=300",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Products",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "CategoryId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "MinPrice",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "MaxPrice",
+									"value": "300"
+								},
+								{
+									"key": "LowStock",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "IsAvailable",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Stock Reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ProductsBaseUrl}}/api/Products/reports/stock-value",
+							"host": [
+								"{{ProductsBaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Products",
+								"reports",
+								"stock-value"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book Store API",
+			"item": [
+				{
+					"name": "Author",
+					"item": [
+						{
+							"name": "Get All Authors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Authors",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Author",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"Rowida\",\n  \"country\": \"Egypt\",\n  \"birthDate\": \"2005-05-04T23:49:24.528Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Authors",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Author",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Authors/6",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Authors",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "Get All Books",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books?AuthorId=1&PageNumber=1&PageSize=3",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books"
+									],
+									"query": [
+										{
+											"key": "Title",
+											"value": "d",
+											"disabled": true
+										},
+										{
+											"key": "ISBN",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "CategoryId",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "AuthorId",
+											"value": "1"
+										},
+										{
+											"key": "IsAvailable",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "PageNumber",
+											"value": "1"
+										},
+										{
+											"key": "PageSize",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Test Book\",\n  \"isbn\": \"123456\",\n  \"publishedYear\": 2025,\n  \"price\": 300,\n  \"stockQuantity\": 5,\n  \"authorId\": 1,\n  \"categoryId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Book By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books/9",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Book",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"TestttBokkk\",\n  \"isbn\": \"1234569\",\n  \"publishedYear\": 2005,\n  \"price\": 300,\n  \"stockQuantity\": 23,\n  \"authorId\": 1,\n  \"categoryId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books/1",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteBook",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books/2",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reports Summary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books/reports/summary",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books",
+										"reports",
+										"summary"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Create Category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"CategoryTry\",\n  \"description\": \"TestCategory\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Categories",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Categories",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Categories"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Error Cases",
+			"item": [
+				{
+					"name": "Missing Resource 404",
+					"item": [
+						{
+							"name": "Get Student by Invalid Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{StudentBaseUrl}}/api/Students/999",
+									"host": [
+										"{{StudentBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Students",
+										"999"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Book by Invalid Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books/99",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books",
+										"99"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by Invalid Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ProductsBaseUrl}}/api/Products/88",
+									"host": [
+										"{{ProductsBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Products",
+										"88"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Invalid Request 400",
+					"item": [
+						{
+							"name": "Create Book With invalid AuthorId",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Test Book\",\n  \"isbn\": \"123456\",\n  \"publishedYear\": 2025,\n  \"price\": 300,\n  \"stockQuantity\": 5,\n  \"authorId\": 11111111,\n  \"categoryId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Author With Books",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Authors/3",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Authors",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Validation Error",
+					"item": [
+						{
+							"name": "Create Book With Negative Stock",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Test Book With Negative stock\",\n  \"isbn\": \"123456\",\n  \"publishedYear\": 2025,\n  \"price\": 300,\n  \"stockQuantity\": -5,\n  \"authorId\": 1,\n  \"categoryId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BooksBaseUrl}}/api/Books",
+									"host": [
+										"{{BooksBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product With Negative Price",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"ProductTest\",\n  \"categoryId\": 3,\n  \"price\": -200,\n  \"stockQuantity\": 5,\n  \"supplierName\": \"Test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ProductsBaseUrl}}/api/Products",
+									"host": [
+										"{{ProductsBaseUrl}}"
+									],
+									"path": [
+										"api",
+										"Products"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "StudentBaseUrl",
+			"value": ""
+		},
+		{
+			"key": "ProductsBaseUrl",
+			"value": ""
+		},
+		{
+			"key": "BooksBaseUrl",
+			"value": ""
+		}
+	]
+}
