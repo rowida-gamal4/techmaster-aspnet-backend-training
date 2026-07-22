@@ -12,3 +12,5 @@ TestResults/
 *.db
 
 *.log
+
+appsettings.Development.json
