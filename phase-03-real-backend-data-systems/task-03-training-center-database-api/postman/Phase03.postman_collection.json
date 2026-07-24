@@ -1,0 +1,1304 @@
+{
+	"info": {
+		"_postman_id": "7715fc0f-312c-42cc-b673-39096afe099c",
+		"name": "Phase03",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "54656082",
+		"_collection_link": "https://rowidagamal33-240050.postman.co/workspace/Rowida-Gamal's-Workspace~65c282f0-dc76-4213-8f29-c6c0c1b3adda/collection/54656082-7715fc0f-312c-42cc-b673-39096afe099c?action=share&source=collection_link&creator=54656082"
+	},
+	"item": [
+		{
+			"name": "Task00",
+			"item": [
+				{
+					"name": "Test the project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5079/WeatherForecast",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5079",
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task01",
+			"item": [
+				{
+					"name": "Drill03",
+					"item": [
+						{
+							"name": "Get Instructor With Track",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Instructors/2/tracks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Instructors",
+										"2",
+										"tracks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Drill04",
+					"item": [
+						{
+							"name": "Get Track With Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks/1/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks",
+										"1",
+										"students"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Student With Enrollments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students/1/enrollments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"1",
+										"enrollments"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Drill05",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Enrollments/1/payment-summary",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Enrollments",
+										"1",
+										"payment-summary"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Drill06",
+					"item": [
+						{
+							"name": "Get All Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Drill07",
+					"item": [
+						{
+							"name": "Delete Student",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Students Including Deleted",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students/deleted",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"deleted"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Drill08",
+					"item": [
+						{
+							"name": "Create Student",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"Saad\",\n  \"email\": \"saad@gmail.com\",\n  \"isActive\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Students/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Student",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"Saad\",\n  \"email\": \"saad@gmail.com\",\n  \"isActive\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Students/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Drill10",
+					"item": [
+						{
+							"name": "Get Students With Pagination",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students?pageNumber=1&pageSize=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students"
+									],
+									"query": [
+										{
+											"key": "pageNumber",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Drill09",
+			"item": [
+				{
+					"name": "Track Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5082/api/Tracks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5082",
+							"path": [
+								"api",
+								"Tracks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5082/api/Students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5082",
+							"path": [
+								"api",
+								"Students"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TrainingCenter.Api",
+			"item": [
+				{
+					"name": "Enrollments",
+					"item": [
+						{
+							"name": "Get All Enrollments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Enrollments?studentId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Enrollments"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Active",
+											"disabled": true
+										},
+										{
+											"key": "trackId",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "studentId",
+											"value": "1"
+										},
+										{
+											"key": "paymentStatus",
+											"value": "pending",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Enrollment By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Enrollments/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Enrollments",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Enrollment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"studentId\": 3,\n  \"trainingTrackId\": 2,\n  \"status\": \"Active\",\n  \"progressPercentage\": 100\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Enrollments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Enrollments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Enrollment Status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\" : \"Active\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Enrollments/1/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Enrollments",
+										"1",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Students Enrollment History",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students/2/enrollments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"2",
+										"enrollments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Student Enrolled in Track",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks/2/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks",
+										"2",
+										"students"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Instructors",
+					"item": [
+						{
+							"name": "Get All Instructors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Instructors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Instructors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Instructor By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Instructors/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Instructors",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Instructor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"salwa\",\n  \"email\": \"salwa@gmail.com\",\n  \"specialization\": \"Backend developer\",\n  \"bio\": \".\",\n  \"isActive\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Instructors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Instructors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Instructor",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"salwaaaaa\",\n  \"email\": \"salwa@gmail.com\",\n  \"specialization\": \"Backend developer\",\n  \"bio\": \".\",\n  \"isActive\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Instructors/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Instructors",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Instructor Tracks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Instructors/2/tracks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Instructors",
+										"2",
+										"tracks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Payments",
+					"item": [
+						{
+							"name": "Get all Payments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Payments?fromDate=2026-07-24T14%3A28%3A23.9254733Z&toDate=2026-07-24T14%3A28%3A23.9254733Z&status=Paid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Payments"
+									],
+									"query": [
+										{
+											"key": "fromDate",
+											"value": "2026-07-24T14%3A28%3A23.9254733Z"
+										},
+										{
+											"key": "toDate",
+											"value": "2026-07-24T14%3A28%3A23.9254733Z"
+										},
+										{
+											"key": "status",
+											"value": "Paid"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Payment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"enrollmentId\": 2,\n  \"amount\": 200,\n  \"paymentMethod\": \"Cash\",\n  \"paymentStatus\": \"Paid\",\n  \"referenceNumber\": 1234,\n  \"note\": \".\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Payments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Payments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Payment history for enrollment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Enrollments/2/payments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Enrollments",
+										"2",
+										"payments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Payment Status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"paymentStatus\": \"Paid\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Payments/2/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Payments",
+										"2",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Reports",
+					"item": [
+						{
+							"name": "Get Dashboard Summary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Reports/dashboard-summary",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Reports",
+										"dashboard-summary"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get UnPaid Enrollments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Reports/unpaid-enrollments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Reports",
+										"unpaid-enrollments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Track-Capacity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Reports/track-capacity",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Reports",
+										"track-capacity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Revenue Summary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Reports/revenue-summary",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Reports",
+										"revenue-summary"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Revenue By Track",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Reports/revenue-by-track",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Reports",
+										"revenue-by-track"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "GetAllStudents",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students?search=g&isActive=true&pageNumber=1&pageSize=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "g"
+										},
+										{
+											"key": "isActive",
+											"value": "true"
+										},
+										{
+											"key": "pageNumber",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Student By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Student",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"TestStudent2\",\n  \"email\": \"test2@gmial.com\",\n  \"phoneNumber\": \"01122055623\",\n  \"isActive\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Students/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Student",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"Student06\",\n  \"email\": \"test@gmail.com\",\n  \"phoneNumber\": \"01122055623\",\n  \"isActive\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Students/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Student",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tracks",
+					"item": [
+						{
+							"name": "Get All Tracks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks?level=1&status=Active",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "f",
+											"disabled": true
+										},
+										{
+											"key": "level",
+											"value": "1"
+										},
+										{
+											"key": "status",
+											"value": "Active"
+										},
+										{
+											"key": "instructorId",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Track By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Track",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Testing\",\n  \"code\": \"1234\",\n  \"description\": \"Testing\",\n  \"level\": 2,\n  \"capacity\": 20,\n  \"startDate\": \"2026-07-24T14:02:20.053Z\",\n  \"endDate\": \"2026-07-24T14:02:20.053Z\",\n  \"status\": \"Active\",\n  \"instructorId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Track",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Testing\",\n  \"code\": \"1234\",\n  \"description\": \"Testing\",\n  \"level\": 4,\n  \"capacity\": 205,\n  \"startDate\": \"2026-07-24T14:02:20.053Z\",\n  \"endDate\": \"2026-07-24T14:02:20.053Z\",\n  \"status\": \"Active\",\n  \"instructorId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Track",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Failure Casses",
+					"item": [
+						{
+							"name": "Delete Student With Invalid ID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Students/99",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Students",
+										"99"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Instructor With Existing Emal",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"sama\",\n  \"email\": \"sama@gmail.com\",\n  \"specialization\": \"Backend developer\",\n  \"bio\": \".\",\n  \"isActive\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5082/api/Instructors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Instructors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Track by invalidId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Track with Active Enrollments",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5082/api/Tracks/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5082",
+									"path": [
+										"api",
+										"Tracks",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
