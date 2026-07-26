@@ -28,6 +28,9 @@ namespace RefactoredCode.Entities
         public ICollection<Payment> Payments {get;set;} = new List<Payment>();
 
         // public PaymentSummary? PaymentSummary { get; set; }
+        public bool IsDeleted { get; set; } 
+
+        public DateTime? DeletedAt { get; set; }
 
     }
 }
