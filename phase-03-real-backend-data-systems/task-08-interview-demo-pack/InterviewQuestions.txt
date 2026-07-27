@@ -1,0 +1,115 @@
+1. What is DbContext and what does it do in your project?
+
+DbContext is the main class that connects my application to the database. I use it to read, add, update, and delete data.manages the relationships between my entities.
+------------------------------
+
+2. What is DbSet and how does it map to database tables?
+
+A DbSet represents a table in the database. For example, 'DbSet<Student>' maps to the Students table, and I use it to perform CRUD operations.
+------------------------------
+
+3. What is a migration and why do we use it?
+
+A migration keeps the database schema synchronized with my entity classes. Whenever I change an entity, I create a migration and update the database instead of creating tables manually.
+
+------------------------------
+
+4. What is the difference between entity and DTO?
+
+An entity represents the database table, while a DTO is used to send or receive data through the API. DTOs help return only the data that the client needs.
+
+------------------------------
+
+5. Why should APIs not return EF entities directly?
+
+Because entities may expose unnecessary data, create circular reference problems, and tightly couple the API to the database structure. DTOs make the API cleaner and safer.
+
+------------------------------
+
+6. What is a foreign key?
+
+A foreign key is a column that connects one table to another. It keeps the relationship between related records, like 'StudentId' in the Enrollment table.
+
+------------------------------
+
+7. Explain the relationship between Student, TrainingTrack and Enrollment.
+
+A student can enroll in many training tracks, and a training track can have many students. The Enrollment table connects them and stores information about each enrollment.
+
+------------------------------
+
+8. Why is Enrollment a join entity instead of a simple many-to-many?
+
+Because Enrollment stores extra information like enrollment date, status, and payment. A simple many-to-many relationship cannot store these additional fields.
+
+------------------------------
+
+9. What is Include and when did you use it?
+
+'Include' is used to load related data with the main entity. For example, I used it to load a training track together with its enrollments.
+
+------------------------------
+
+10. What is Select projection and why is it useful?
+
+'Select' lets me choose only the fields I need instead of returning the whole entity. This improves performance and is useful when creating DTOs.
+
+------------------------------
+
+11. What is pagination and why does an API need it?
+
+Pagination returns data in small pages instead of all records at once. It improves performance and makes the API faster when there is a lot of data.
+
+------------------------------
+
+12. How did you prevent duplicate active enrollments?
+
+Before creating a new enrollment, I checked if the student already had an active enrollment in the same training track. If one exists, the API returns an error.
+
+------------------------------
+
+13. How did you protect track capacity?
+
+Before adding a new enrollment, I counted the active enrollments. If the track reached its capacity, I stopped the enrollment and returned an error message.
+
+------------------------------
+
+14. How did you handle payment validation?
+
+I checked that the payment amount was valid and that the enrollment existed before saving the payment. If the validation failed, the API returned an error.
+
+------------------------------
+
+15. What is soft delete and why did you use it?
+
+Soft delete means the record is not removed from the database. Instead, I changed its status to inactive. This keeps the data for history and prevents losing important information.
+
+------------------------------
+
+16. What is the difference between local database and remote database?
+
+A local database runs on my own computer for development and testing. A remote database is hosted on a server and is used by the deployed application.
+
+------------------------------
+
+17. How did you configure the production connection string?
+
+I kept the production connection string outside the source code, usually in environment variables or server configuration, so it is not exposed.
+
+------------------------------
+
+18. Why should connection strings not be pushed to GitHub?
+
+Because they contain sensitive information like server names, usernames, and passwords. Anyone who sees them could access the database.
+
+------------------------------
+
+19. What is the hardest bug you faced in deployment?
+
+One of the hardest bugs was JSON circular reference error when returning EF entities
+
+------------------------------
+
+20. If you had one more week, how would you improve the system?
+
+I would add authentication and authorization, better logging, and improve the API documentation. 
