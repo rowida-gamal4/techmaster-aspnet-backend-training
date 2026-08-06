@@ -81,12 +81,20 @@ namespace TrainingCenter.Services
 
                     studentId = student.StudentId;
                 }
-                else if (request.Role == Role.Instructor)
+                 else if (request.Role == Role.Instructor)
                 {
+                    if (string.IsNullOrWhiteSpace(request.Specialization))
+                    {
+                        response.ErrorType = ErrorType.Validation;
+                        response.Message = "Specialization is required for instructors.";
+                        return response;
+                    }
+
                     var instructor = new Instructor
                     {
                         FullName = request.FullName,
                         Email = request.Email,
+                        Specialization = request.Specialization,
                         CreatedAt = DateTime.UtcNow,
                         IsActive = true
                     };
@@ -96,6 +104,7 @@ namespace TrainingCenter.Services
 
                     instructorId = instructor.InstructorId;
                 }
+
 
 
                 var user = new ApplicationUser

@@ -23,5 +23,6 @@ namespace TrainingCenter.DTOs.Auth
 
         [Required]
         public Role Role { get; set; }
+        public string? Specialization { get; set; }
     }
 }
