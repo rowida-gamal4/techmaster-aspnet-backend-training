@@ -35,7 +35,7 @@ namespace TrainingCenter.Services
             if (!IsStrongPassword(request.Password))
             {
                 response.ErrorType = ErrorType.Validation;
-                response.Message = "Password must be at least 8 characters and contain uppercase, lowercase, number, and special character.";
+                response.Message = "Not strong password.";
                 return response;
             }
 
