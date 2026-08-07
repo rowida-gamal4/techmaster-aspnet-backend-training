@@ -111,7 +111,7 @@ namespace TrainingCenter.Services
             return response;
         }
 
-        public GeneralResponseDto<TrackSessionResponse> UpdateSession( int id,UpdateTrackSessionRequest request)
+        public GeneralResponseDto<TrackSessionResponse> UpdateSession(int id, UpdateTrackSessionRequest request)
         {
             GeneralResponseDto<TrackSessionResponse> response = new();
 
@@ -169,45 +169,89 @@ namespace TrainingCenter.Services
         }
         #endregion
 
-        public GeneralResponseDto<InstructorDetailsResponse> CreateInstructor(CreateInstructorRequest instructorRequest)
+        public GeneralResponseDto<InstructorDetailsResponse> CreateInstructor(CreateInstructorRequest request)
         {
-            GeneralResponseDto<InstructorDetailsResponse> responseDto = new();
+            GeneralResponseDto<InstructorDetailsResponse> response = new();
 
-            if (context.Instructors.Any(i => i.Email == instructorRequest.Email))
+            if (context.Instructors.Any(i => i.Email.ToLower() == request.Email.ToLower()))
             {
-                responseDto.Success = false;
-                responseDto.Message = "Email already exists";
-                responseDto.ErrorType = ErrorType.Conflict;
-                return responseDto;
+                response.Success = false;
+                response.Message = "Email already exists.";
+                response.ErrorType = ErrorType.Conflict;
+                return response;
             }
-            Instructor instructor = new()
-            {
-                FullName = instructorRequest.FullName,
-                Email = instructorRequest.Email,
-                Specialization = instructorRequest.Specialization,
-                Bio = instructorRequest.Bio,
-                IsActive = instructorRequest.IsActive,
-                CreatedAt = DateTime.UtcNow
-            };
-            context.Instructors.Add(instructor);
-            context.SaveChanges();
-            InstructorDetailsResponse detailsResponse = new()
-            {
-                InstructorId = instructor.InstructorId,
-                FullName = instructor.FullName,
-                Email = instructor.Email,
-                Specialization = instructor.Specialization,
-                Bio = instructor.Bio,
-                IsActive = instructor.IsActive,
-                CreatedAt = instructor.CreatedAt
-            };
-            responseDto.Success = true;
-            responseDto.Message = "Instructor created successfully";
-            responseDto.Data = detailsResponse;
 
-            return responseDto;
+            if (context.Users.Any(u => u.Email.ToLower() == request.Email.ToLower()))
+            {
+                response.Success = false;
+                response.Message = "Email already exists.";
+                response.ErrorType = ErrorType.Conflict;
+                return response;
+            }
+
+            using var transaction = context.Database.BeginTransaction();
+
+            try
+            {
+                Instructor instructor = new()
+                {
+                    FullName = request.FullName,
+                    Email = request.Email,
+                    Specialization = request.Specialization,
+                    Bio = request.Bio,
+                    IsActive = request.IsActive,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                context.Instructors.Add(instructor);
+                context.SaveChanges();
+
+                ApplicationUser user = new()
+                {
+                    FullName = instructor.FullName,
+                    Email = instructor.Email,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
+                    Role = Role.Instructor,
+                    IsActive = instructor.IsActive,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow,
+                    InstructorId = instructor.InstructorId,
+                    StudentId = null
+                };
+
+                context.Users.Add(user);
+                context.SaveChanges();
+
+                transaction.Commit();
+
+                InstructorDetailsResponse detailsResponse = new()
+                {
+                    InstructorId = instructor.InstructorId,
+                    FullName = instructor.FullName,
+                    Email = instructor.Email,
+                    Specialization = instructor.Specialization,
+                    Bio = instructor.Bio,
+                    IsActive = instructor.IsActive,
+                    CreatedAt = instructor.CreatedAt
+                };
+
+                response.Success = true;
+                response.Message = "Instructor and user account created successfully.";
+                response.Data = detailsResponse;
+
+                return response;
+            }
+            catch
+            {
+                transaction.Rollback();
+
+                response.Success = false;
+                response.Message = "Failed to create instructor.";
+                response.ErrorType = ErrorType.Conflict;
+
+                return response;
+            }
         }
-
         public GeneralResponseDto<bool> DeleteInstructor(int id)
         {
             GeneralResponseDto<bool> responseDto = new();

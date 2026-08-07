@@ -14,5 +14,6 @@ namespace TrainingCenter.DTOs
         public string? PhoneNumber { get; set; }
 
         public bool IsActive { get; set; } = true;
+        public string Password { get; set; } = default!;
     }
 }

@@ -194,7 +194,7 @@ namespace TrainingCenter.Services
                 return responseDto;
             }
 
-            bool emailExists = context.Students.Any(s =>!s.IsDeleted &&s.StudentId != student.StudentId && s.Email.ToLower() == request.Email.ToLower());
+            bool emailExists = context.Students.Any(s => !s.IsDeleted && s.StudentId != student.StudentId && s.Email.ToLower() == request.Email.ToLower());
 
             if (emailExists)
             {
@@ -403,44 +403,88 @@ namespace TrainingCenter.Services
 
         }
 
-        public GeneralResponseDto<StudentDetailsResponse> CreateStudent(CreateStudentRequest studentRequest)
+        public GeneralResponseDto<StudentDetailsResponse> CreateStudent(CreateStudentRequest request)
         {
-            GeneralResponseDto<StudentDetailsResponse> responseDto = new();
-            if (context.Students.Any(s => !s.IsDeleted && s.Email == studentRequest.Email))
+            GeneralResponseDto<StudentDetailsResponse> response = new();
+
+            if (context.Students.Any(s => !s.IsDeleted && s.Email.ToLower() == request.Email.ToLower()))
             {
-                responseDto.Success = false;
-                responseDto.Message = "Email already exists";
-                responseDto.ErrorType = ErrorType.Conflict;
-                return responseDto;
+                response.Success = false;
+                response.Message = "Email already exists.";
+                response.ErrorType = ErrorType.Conflict;
+                return response;
             }
-            Student student = new()
+
+            if (context.Users.Any(u => u.Email.ToLower() == request.Email.ToLower()))
             {
-                FullName = studentRequest.FullName,
-                Email = studentRequest.Email,
-                PhoneNumber = studentRequest.PhoneNumber,
-                IsActive = studentRequest.IsActive,
-                CreatedAt = DateTime.UtcNow
-            };
+                response.Success = false;
+                response.Message = "Email already exists.";
+                response.ErrorType = ErrorType.Conflict;
+                return response;
+            }
 
-            context.Students.Add(student);
-            context.SaveChanges();
-            StudentDetailsResponse detailsResponse = new()
+            using var transaction = context.Database.BeginTransaction();
+
+            try
             {
-                StudentId = student.StudentId,
-                FullName = student.FullName,
-                Email = student.Email,
-                PhoneNumber = student.PhoneNumber,
-                IsActive = student.IsActive,
-                CreatedAt = student.CreatedAt,
-                UpdatedAt = student.UpdatedAt
-            };
+                Student student = new()
+                {
+                    FullName = request.FullName,
+                    Email = request.Email,
+                    PhoneNumber = request.PhoneNumber,
+                    IsActive = request.IsActive,
+                    IsDeleted = false,
+                    CreatedAt = DateTime.UtcNow
+                };
 
-            responseDto.Success = true;
-            responseDto.Message = "Student created successfully";
-            responseDto.Data = detailsResponse;
+                context.Students.Add(student);
+                context.SaveChanges();
 
-            return responseDto;
+                ApplicationUser user = new()
+                {
+                    FullName = student.FullName,
+                    Email = student.Email,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
+                    Role = Role.Student,
+                    IsActive = student.IsActive,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow,
+                    StudentId = student.StudentId,
+                    InstructorId = null
+                };
 
+                context.Users.Add(user);
+                context.SaveChanges();
+
+                transaction.Commit();
+
+                StudentDetailsResponse detailsResponse = new()
+                {
+                    StudentId = student.StudentId,
+                    FullName = student.FullName,
+                    Email = student.Email,
+                    PhoneNumber = student.PhoneNumber,
+                    IsActive = student.IsActive,
+                    CreatedAt = student.CreatedAt,
+                    UpdatedAt = student.UpdatedAt
+                };
+
+                response.Success = true;
+                response.Message = "Student and user account created successfully.";
+                response.Data = detailsResponse;
+
+                return response;
+            }
+            catch
+            {
+                transaction.Rollback();
+
+                response.Success = false;
+                response.Message = "Failed to create student.";
+                response.ErrorType = ErrorType.Conflict;
+
+                return response;
+            }
         }
 
         public GeneralResponseDto<StudentDetailsResponse> UpdateStudent(int id, UpdateStudentRequest studentRequest)

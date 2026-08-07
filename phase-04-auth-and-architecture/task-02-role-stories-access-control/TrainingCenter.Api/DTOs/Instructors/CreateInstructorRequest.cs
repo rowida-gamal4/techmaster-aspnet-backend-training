@@ -20,5 +20,6 @@ namespace TrainingCenter.DTOs
         public string? Bio { get; set; }
 
         public bool IsActive { get; set; } = true;
+        public string Password { get; set; } = default!;
     }
 }
